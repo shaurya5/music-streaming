@@ -1,0 +1,13 @@
+.login-btn {
+    padding: 8%;
+    border-radius: 5%;
+    border: 1px solid white;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    margin-right: 90%;
+}
+
+.login-btn:hover {
+    background-color: aliceblue;
+}

@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+}
+
+/* .background {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+} */
+
+.background {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  /* background: -webkit-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+  background: -o-linear-gradient(110deg, #172175 60%, #ffed4b 60%);
+  background: -moz-linear-gradient(110deg, #111944 60%, #ffed4b 60%); */
+  background: linear-gradient(110deg, #0C0032 60%, #190061 60%);
+}
+
+/* .loginCard {
+	height: 70vh;
+	width: 60vh;
+	border-radius: 20%;
+	border: 1px solid white;
+	background: rgba(250, 250, 250, .2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+} */
+
+.login-btn {
+	width: 10px;
+	height: 10px;
+}

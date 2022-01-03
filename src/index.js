@@ -8,13 +8,13 @@ import './Components/routes';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Auth0Provider
+    <Auth0Provider
     domain="dev-zlhpa86v.us.auth0.com"
     clientId="ZR3QtOF55kDH6JUEJmcIueAOkbbdIdSw"
     redirectUri={window.location.origin}
-    > */}
+    >
       <App />
-    {/* </Auth0Provider> */}
+    </Auth0Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

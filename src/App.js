@@ -4,13 +4,13 @@ import {BrowserRouter as Router, Routes, Route, BrowserRouter} from 'react-route
 import DashBoard from './Components/Pages/DashBoard';
 import LoginButton from './Components/LoginButton';
 import routes from './Components/routes';
-import Header from './Components/Header';
+import HeaderDash from './Components/HeaderDash';
+import HeaderHome from './Components/HeaderHome';
 
 function App() {
   return (
     <div>
-      <Header />
-      <DashBoard />
+      <Home />
     </div>
   );
 }

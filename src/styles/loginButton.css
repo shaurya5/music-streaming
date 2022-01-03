@@ -1,13 +1,11 @@
-.login-btn {
-    padding: 8%;
-    border-radius: 5%;
-    border: 1px solid white;
-    width: 100px;
+.mb-2 {
     display: flex;
+    /* width: 20rem; */
+    align-items: center;
     justify-content: center;
-    margin-right: 90%;
+    margin-top: 16rem;
 }
 
-.login-btn:hover {
-    background-color: aliceblue;
+.btn-home {
+    background-color: rgb(26, 121, 150) !important;
 }

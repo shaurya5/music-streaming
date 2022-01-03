@@ -1,14 +1,12 @@
-import '../../styles/home.css';
 import LoginButton from '../LoginButton';
 import LogoutButton from '../LogoutButton';
+import HeaderHome from '../HeaderHome';
 
 const Home = () => {
 	return (
 		<div className='background'>
-			<div className='bg-image'></div>
-			<div className='login'>
-				<LoginButton />
-			</div>
+			<HeaderHome />
+			<LoginButton />
 		</div>
 	)
 }

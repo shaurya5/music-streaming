@@ -4,14 +4,15 @@ import './index.css';
 import App from './App';
 import { Auth0Provider } from '@auth0/auth0-react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import './Components/routes';
 
 ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider
-    domain="dev-zlhpa86v.us.auth0.com"
-    clientId="ZR3QtOF55kDH6JUEJmcIueAOkbbdIdSw"
-    redirectUri={window.location.origin}
+      domain="dev-zlhpa86v.us.auth0.com"
+      clientId="ZR3QtOF55kDH6JUEJmcIueAOkbbdIdSw"
+      redirectUri={window.location.origin}
+      useRefreshTokens
+      cacheLocation="localstorage"
     >
       <App />
     </Auth0Provider>

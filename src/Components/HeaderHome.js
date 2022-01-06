@@ -6,7 +6,7 @@ const HeaderHome = () => {
   return (
     <div>
       <Navbar className="navbar" bg="dark" variant="dark">
-        <Container>
+        <Container className="header-elements">
           <Navbar.Brand>
             <img 
               alt=""

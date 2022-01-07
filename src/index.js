@@ -5,11 +5,14 @@ import App from './App';
 import { Auth0Provider } from '@auth0/auth0-react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
+const domain = "dev-zlhpa86v.us.auth0.com";
+const clientId = "ZR3QtOF55kDH6JUEJmcIueAOkbbdIdSw";
+
 ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider
-      domain="dev-zlhpa86v.us.auth0.com"
-      clientId="ZR3QtOF55kDH6JUEJmcIueAOkbbdIdSw"
+      domain={domain}
+      clientId={clientId}
       redirectUri={window.location.origin}
       useRefreshTokens
       cacheLocation="localstorage"

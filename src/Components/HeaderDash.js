@@ -23,12 +23,12 @@ const HeaderDash = () => {
 						Play Me
 					</Navbar.Brand>
 					<Nav className="list">
-						<Nav.Link>Home</Nav.Link>
+						<Nav.Link href="/dashboard">Home</Nav.Link>
 						<Nav.Link>Stars</Nav.Link>
 						<Nav.Link>Trending</Nav.Link>
 						<Nav.Link className="greeting-dash">Hi, {user.name}</Nav.Link>
 						<NavDropdown className="profile-dropdown">
-							<NavDropdown.Item onClick={() => LogoutButton()}>My Profile</NavDropdown.Item>
+							<NavDropdown.Item href="/myprofile">My Profile</NavDropdown.Item>
 							<NavDropdown.Item onClick={() => logout({ returnTo: window.location.origin })} href="">Logout</NavDropdown.Item>
 						</NavDropdown>
 					</Nav>

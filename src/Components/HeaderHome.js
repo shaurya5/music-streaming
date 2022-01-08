@@ -1,4 +1,4 @@
-import {Nav, Navbar, Container } from 'react-bootstrap';
+import { Navbar, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/headerHome.css';
 

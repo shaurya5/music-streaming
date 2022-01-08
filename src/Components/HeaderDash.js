@@ -1,7 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
-import LogoutButton from "./LogoutButton";
 import '../styles/headerDash.css';
 
 const HeaderDash = () => {

@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './Components/Pages/Home';
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DashBoard from './Components/Pages/DashBoard';
 import MyProfile from './Components/MyProfile';
 import { Helmet } from 'react-helmet';

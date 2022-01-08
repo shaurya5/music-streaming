@@ -4,25 +4,22 @@ import { supabase } from './supabase';
 import { useAuth0 } from '@auth0/auth0-react';
 
 function Upload(props) {
-
-  const { user, isAuthenticated } = useAuth0();
-  const [ author, setAuthor ] = useState("");
-  const [ title, setTitle ] = useState("");
-  const [ url, setUrl ] = useState("");
+  const { user } = useAuth0();
+  const [ songInfo, setSongInfo ] = useState({author: null,title: null,url: null});
 
   const createSong = async () => {
     await supabase
       .from("songs")
       .insert([
-        { url, title, author }
+         {url: songInfo.url, title: songInfo.title, author: songInfo.author} 
       ])
       .single();
   }
 
   useEffect(() => {
-    if(url && author && title){
+    if(songInfo.url && songInfo.author && songInfo.title){
       createSong();
-      window.location.reload(false);
+      // window.location.reload(false);
     }
   });
 
@@ -33,23 +30,16 @@ function Upload(props) {
         uploadPreset: "wlj0ysle"
       },
       (error, result) => {
-        if(result.event === "success") {
-          if(result.info.is_audio === true){
-            setUrl(result.info.secure_url);
-            setAuthor(user.name);
-            setTitle(result.info.original_filename);
-          }
+        if(result.event === "success" && result.info.is_audio) {
+          setSongInfo({author: user.name, title: result.info.original_filename, url: result.info.secure_url})
+        }
+        else {
+          // TODO: Add error handling
         }
       }
     );
     widget.open();
   }
-  console.log(url);
-
-  // if(url && title && author){
-  //   createSong();
-  //   window.location.reload(false);
-  // }
 
   return (
     <div>

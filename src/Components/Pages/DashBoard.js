@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 const DashBoard = () => {
 	const { isAuthenticated } = useAuth0();
-	const[musicList, setMusicList] = useState([]);
+	const[ musicList, setMusicList ] = useState([]);
 	const navigate = useNavigate();
 
 	async function getSongs() {
@@ -26,6 +26,7 @@ const DashBoard = () => {
 
 	if(!isAuthenticated){
 		navigate('/');
+		console.log('Not Authorized');
 	}
 
 	return (
@@ -33,11 +34,11 @@ const DashBoard = () => {
 		<div>
 			<HeaderDash />
 			<Upload />
-			{/* <div className='music-grid'>
+			<div className='music-grid'>
 				{musicList.map((m, key) => (
 					<MusicCard musicList={m} index={key}/>
 				))}
-			</div> */}
+			</div>
 		</div>
 	);
 }

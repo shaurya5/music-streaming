@@ -10,43 +10,46 @@ function Upload(props) {
   const [ title, setTitle ] = useState("");
   const [ url, setUrl ] = useState("");
 
-  // const createSong = async () => {
-  //   await supabase
-  //     .from("songs")
-  //     .insert([
-  //       { url, title, author }
-  //     ])
-  //     .single();
-  // }
+  const createSong = async () => {
+    await supabase
+      .from("songs")
+      .insert([
+        { url, title, author }
+      ])
+      .single();
+  }
 
-  // if(url && title && author){
-  //   createSong();
-  //   window.location.reload(false);
-  // }
+  useEffect(() => {
+    if(url && author && title){
+      createSong();
+      window.location.reload(false);
+    }
+  });
 
   const openWidget = () => {
     const widget = window.cloudinary.createUploadWidget(
       {
         cloudName: "dogqthbp1",
-        uploadPreset: "cc8dhvqx"
+        uploadPreset: "wlj0ysle"
       },
       (error, result) => {
         if(result.event === "success") {
           if(result.info.is_audio === true){
-            console.log(result.info);
             setUrl(result.info.secure_url);
             setAuthor(user.name);
             setTitle(result.info.original_filename);
-          }
-          else{
-            alert("Not a music format file. Try uploading again!");
-            widget.close();
           }
         }
       }
     );
     widget.open();
   }
+  console.log(url);
+
+  // if(url && title && author){
+  //   createSong();
+  //   window.location.reload(false);
+  // }
 
   return (
     <div>

@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { Auth0Provider } from '@auth0/auth0-react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 const domain = "dev-zlhpa86v.us.auth0.com";
 const clientId = "ZR3QtOF55kDH6JUEJmcIueAOkbbdIdSw";

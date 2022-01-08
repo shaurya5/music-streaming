@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
 import ReactAudioPlayer from 'react-audio-player';
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
-function MusicCard( {musicList}) {
+function MusicCard({musicList, index}) {
   return (
     <div>
-      <Card border="dark" style={{ width: '18rem' }}>
+      <p>hello</p>
+      <Card key={index} border="dark" style={{ width: '18rem' }}>
         <Card.Header>
           <Card.Text>{musicList.author}</Card.Text>
           {/* <Card.Text>Added on {props.dateAdded}</Card.Text> */}

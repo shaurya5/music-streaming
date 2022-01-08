@@ -1,5 +1,4 @@
 import LoginButton from '../LoginButton';
-import LogoutButton from '../LogoutButton';
 import HeaderHome from '../HeaderHome';
 
 const Home = () => {

@@ -9,9 +9,9 @@ import { useNavigate } from 'react-router-dom';
 
 const DashBoard = () => {
 	const { isAuthenticated } = useAuth0();
-	const[ musicList, setMusicList ] = useState([]);
+	const [musicList, setMusicList] = useState([]);
 	const navigate = useNavigate();
-
+	
 	async function getSongs() {
 		const { data } = await supabase
 			.from("songs")
@@ -24,7 +24,7 @@ const DashBoard = () => {
 	}, []);
 	console.log(musicList);
 
-	if(!isAuthenticated){
+	if (!isAuthenticated) {
 		navigate('/');
 		console.log('Not Authorized');
 	}
@@ -34,10 +34,12 @@ const DashBoard = () => {
 		<div>
 			<HeaderDash />
 			<Upload />
-			<div className='music-grid'>
-				{musicList.map((m, key) => (
-					<MusicCard musicList={m} index={key}/>
-				))}
+			<div className='grid-wrap'>
+				<div className='music-grid'>
+					{musicList.map((m, key) => (
+						<MusicCard musicList={m} index={key} />
+					))}
+				</div>
 			</div>
 		</div>
 	);
